@@ -1,6 +1,7 @@
 import './App.css';
 import React from 'react'
 import Navbar from './components/Navbar';
+import About from './components/About';
 import { useState } from 'react';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
     <div className="btn btn-primary" onClick={chnageColor}>Click to change the background color
     </div>
     </div>
+    <About button="Enable Dark Mode"/>
     </>
   );
 }
