@@ -1,0 +1,1 @@
+In this i have added a functuonaloty of changin the backgorund color of the body and also we can chnage the navbar using props.
