@@ -11,13 +11,13 @@ function App() {
   //     myMode("dark")
   //   }
   // }
-  document.body.style.backgroundColor="purple"
+  document.body.style.backgroundColor="white"
   const chnageColor = () => {
-    if (document.body.style.backgroundColor==="purple"){
+    if (document.body.style.backgroundColor==="white"){
         document.body.style.backgroundColor="black"
     }
     else{
-      document.body.style.backgroundColor="purple"
+      document.body.style.backgroundColor="white"
     }
   }
 
