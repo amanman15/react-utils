@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-export default function TextArea(props) {
+export default function TextArea() {
     // usestate for Cases change
     const[upperCase, changeCase]=useState("Click to Convert Upper Case")
     
@@ -33,18 +33,17 @@ export default function TextArea(props) {
       
   return (
     <>
-    <div className="container my-3" style={{color:props.mode==="dark"?"white":"balck"}}>
+    <div className="container">
         <div className="form-size">
-        <textarea className="form-control" value={caseText}  onChange={handleOnChange} placeholder="Enter text here" id="floatingTextarea" rows="8" cols="20"  style={{backgroundColor: props.mode==="dark"?"#284F8F":"white", color: props.mode==="dark"?"white":"black"}}></textarea>
-        
+        <textarea className="form-control" value={caseText} onChange={handleOnChange} placeholder='Enter text here' id="floatingTextarea" rows="8" cols="20"></textarea>
         </div>
-        <button className='btn btn-primary my-3 mx-3' onClick={convertUpper}>{upperCase}</button>
+        <button className='btn btn-primary my-3 mx-3' onClick={convertUpper} >{upperCase}</button>
         <button className='btn btn-primary my-3' onClick={clearText} >Clear Text</button>
     </div>
     <div className="container">
-        <h1 style={{color:props.mode==="dark"?"white":"black"}}>Preview</h1>
-        <p  style={{color:props.mode==="dark"?"pink":"black"}}>{caseText}</p>
-        <p  style={{color:props.mode==="dark"?"yellow":"black"}}>Total Number of letters in text is {caseText.length} and total words are {trimmedText === "" ? 0 : trimmedText.split(" ").length} </p>
+        <h1>Preview</h1>
+        <p>{caseText}</p>
+        <p>Total Number of letters in text is {caseText.length} and total words are {trimmedText === "" ? 0 : trimmedText.split(" ").length} </p>
     </div>
     </>
   )

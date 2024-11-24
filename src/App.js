@@ -6,31 +6,23 @@ import { useState } from 'react';
 import TextArea from './components/TextArea';
 
 function App() {
-  const[mode, myMode]=useState("light")
-  // const changeMode = () => {
-  //   if (mode==="light"){
-  //     myMode("dark")
-  //   }
-  // }
-  document.body.style.backgroundColor="white"
-  const chnageColor = () => {
-    if (document.body.style.backgroundColor==="white"){
-        document.body.style.backgroundColor="black"
+  const[mode, setMode]=useState("light")
+
+  const toggleMode = () => {
+    if (mode==='light'){
+      setMode('dark')
+      document.body.style.backgroundColor="#284F8F" 
     }
     else{
+      setMode('light')
       document.body.style.backgroundColor="white"
-    }
-  }
+  }}
 
   return (
     <>
-    <Navbar background="dark"/>
-    <div className="container my-3">
-    <div className="btn btn-primary" onClick={chnageColor}>Click to change the background color
-    </div>
-    </div>
+    <Navbar mode={mode} toggleMode={toggleMode} />
     {/* <About button="Enable Dark Mode"/> */}
-    <TextArea/>
+    <TextArea mode={mode}/>
     </>
   );
 }
