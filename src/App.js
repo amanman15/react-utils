@@ -3,6 +3,7 @@ import React from 'react'
 import Navbar from './components/Navbar';
 import About from './components/About';
 import { useState } from 'react';
+import TextArea from './components/TextArea';
 
 function App() {
   const[mode, myMode]=useState("light")
@@ -28,7 +29,8 @@ function App() {
     <div className="btn btn-primary" onClick={chnageColor}>Click to change the background color
     </div>
     </div>
-    <About button="Enable Dark Mode"/>
+    {/* <About button="Enable Dark Mode"/> */}
+    <TextArea/>
     </>
   );
 }
