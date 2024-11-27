@@ -5,6 +5,14 @@ import About from './components/About';
 import { useState } from 'react';
 import TextArea from './components/TextArea';
 import Alert from './components/Alert';
+import Home from './components/Home';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+
 
 function App() {
   const[mode, setMode]=useState("light")
@@ -32,10 +40,15 @@ function App() {
 
   return (
     <>
+    <Router>
     <Navbar mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert}/>
-    {/* <About button="Enable Dark Mode"/> */}
-    <TextArea showAlert={showAlert} mode={mode}/>
+    <Routes>
+    <Route exact path="/about" element={<About button="Enable Dark Mode"/>}/>
+    <Route exact path="/textArea" element={<TextArea showAlert={showAlert} mode={mode}/>}/>
+    <Route exact path="/home" element={<Home mode={mode} />} />
+      </Routes> 
+      </Router>   
     </>
   );
 }

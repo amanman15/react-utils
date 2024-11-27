@@ -35,7 +35,7 @@ export default function TextArea(props) {
       
   return (
     <>
-    <div className="container my-3" style={{color:props.mode==="dark"?"white":"balck"}}>
+    <div className="container my-3" style={{color:props.mode==="dark"?"white":"black"}}>
         <div className="form-size">
         <textarea className="form-control" value={caseText}  onChange={handleOnChange} placeholder="Enter text here" id="floatingTextarea" rows="8" cols="20"  style={{backgroundColor: props.mode==="dark"?"grey":"white", color: props.mode==="dark"?"white":"black"}}></textarea>
         
